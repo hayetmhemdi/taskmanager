@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-cicd": {
+    "task-manager": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todolist/browser",
+            "outputPath": "dist/taskmanager/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -28,7 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/angular-cicd/"
+            "baseHref": "/taskmanager/"
           },
           "configurations": {
             "production": {
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-cicd:build:production"
+              "buildTarget": "taskmanager:build:production"
             },
             "development": {
-              "buildTarget": "angular-cicd:build:development"
+              "buildTarget": "taskmanager:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-cicd:build"
+            "buildTarget": "taskmanager:build"
           }
         },
         "test": {
