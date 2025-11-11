@@ -27,12 +27,12 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration production
+        run: npm run build -- --configuration production --base-href /taskmanager/   # ⚠️ Ajout du base-href
 
       - name: Upload dist folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/taskmanager/browser # ✅ must point to your Angular build output
+          path: dist/taskmanager/browser  # ✅ Garde ce chemin si c’est bien celui généré
 
   deploy:
     environment:
@@ -45,3 +45,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+     
+      
