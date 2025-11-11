@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todolist/browser",
+            "outputPath": "dist/taskmanager/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -28,7 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/todolist"
+            "baseHref": "/taskmanager/"
           },
           "configurations": {
             "production": {
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "todolist:build:production"
+              "buildTarget": "taskmanager:build:production"
             },
             "development": {
-              "buildTarget": "todolist:build:development"
+              "buildTarget": "taskmanager:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "todolist:build"
+            "buildTarget": "taskmanager:build"
           }
         },
         "test": {
