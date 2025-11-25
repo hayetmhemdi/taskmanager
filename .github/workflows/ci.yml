@@ -27,12 +27,12 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration production --base-href /taskmanager/ --base-href /taskmanager/
+        run: npm run build -- --configuration production --base-href /taskmanager/
 
       - name: Upload dist folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/taskmanager  # Assure-toi que le build crée ce dossier
+          path: dist/taskmanager   # ← change only if your folder name is different
 
   deploy:
     environment:
